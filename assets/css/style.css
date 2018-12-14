@@ -1,0 +1,1252 @@
+@font-face {
+    font-family: gotham;
+    src: url('../fonts/Gotham-Bold(1).ttf');
+}
+@font-face {
+    font-family: gotham-medio;
+    src: url('../fonts/Gotham-Medium(1).ttf');
+}
+@font-face {
+    src: url('../fonts/Gotham-Light_0(1).otf');
+}
+* {
+    outline: none;
+}
+a {
+    text-decoration: none!important;
+    cursor: pointer!important;
+}
+p {
+    line-height: 1.5;
+}
+ul {
+    padding: 0;
+}
+li {
+    list-style: none;
+}
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+.container {
+    max-width: 1300px!important;
+    width: 100%;
+}
+
+
+.musicas{
+    position: absolute;
+    top: 10px;
+    right: 15%;
+}
+.ico-music {
+    border-left: 1px solid #313131;
+    float: right;
+    width: 100%;
+    padding: 22px 22px 22px 60px;
+}
+.ttw-music-player .player {
+    width: 100%;
+}
+/** Album Cover **/
+.ttw-music-player .album-cover {
+    display: none!important;
+}
+.ttw-music-player .album-cover .img {
+    box-shadow: inset 0 0 1px rgba(255, 255, 255, .6);
+    -moz-box-shadow: inset 0 0 1px rgba(255, 255, 255, .6);
+    -webkit-box-shadow: inset 0 0 1px rgba(255, 255, 255, .6);
+    background-position:center center;
+    background-repeat:no-repeat;
+    background-color:transparent;
+}
+.ttw-music-player .album-cover .highlight {
+    background: transparent url(../images/album-cover-highlight.png) no-repeat 0 0 scroll;
+    opacity: 1;
+
+}
+.ttw-music-player .album-cover:hover .highlight {
+    opacity: 1;
+}
+.ttw-music-player .album-cover,
+.ttw-music-player .album-cover .img,
+.ttw-music-player .album-cover .highlight {
+    display: block;
+    height: 73px;
+    width: 81px;
+}
+.ttw-music-player .album-cover img,
+.ttw-music-player .album-cover .img,
+.ttw-music-player .album-cover .highlight {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 73px;
+    width: 81px;
+}
+
+/** Track Info **/
+.ttw-music-player .track-info {
+    width: 215px;
+    float: left;
+    font-size: 12px;
+}
+
+.ttw-music-player .player .title {
+    color: #f6d79c;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.ttw-music-player .artist-outer {
+    display: none;
+}
+.ttw-music-player .rating {
+    display: none;
+}
+.coluna-esq {
+    float: right;
+    margin-top: 8px;
+}
+
+.ttw-music-player .rating-star:hover,
+.ttw-music-player .rating-star.on,
+.ttw-music-player .rating-star.hover {
+    background: transparent url(../images/rating-on.png) no-repeat center center scroll;
+}
+
+/** Player **/
+.ttw-music-player .player-controls {
+    float: right;
+}
+
+.ttw-music-player .player-controls .main {
+    width: auto;
+    height: 12px;
+    margin: 9px 9px;
+    float: left;
+}
+
+.ttw-music-player .player-controls div {
+
+    float: left;
+    cursor: pointer;
+}
+
+.ttw-music-player .previous, .ttw-music-player .next {
+    height: 16px;
+    width: 23px;
+    margin: 1px 0;
+}
+
+.ttw-music-player .play, .ttw-music-player .pause {
+    width: 30px;
+    height: 68px;
+    margin: -24px 10px 0 9px;
+}
+
+.ttw-music-player .previous {
+    background: transparent url(../img/player-previous-2.png) no-repeat center center scroll;
+}
+
+.ttw-music-player .next {
+    background: transparent url(../img/player-next-2.png) no-repeat center center scroll;
+}
+
+.ttw-music-player .play {
+    background: transparent url(../img/player-play-2.png) no-repeat center center scroll;
+}
+
+.ttw-music-player .pause {
+    background: transparent url(../img/player-pause-2.png) no-repeat center center scroll;
+}
+
+.ttw-music-player .progress-wrapper {
+    display: none;
+}
+
+.ttw-music-player .progress {
+    height: 9px;
+    width: 135px;
+    cursor: pointer;
+}
+
+.ttw-music-player .elapsed {
+    height: 6px;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    margin: 1px;
+    width: 60%;
+    background: transparent url(../images/player-elapsed-2.png) repeat-x 0 0 scroll;
+}
+
+.ttw-music-player .unused-controls {
+    display: none !important;
+}
+
+/** Description **/
+.ttw-music-player .description {
+    display: none;
+}
+
+/** Track List **/
+.ttw-music-player .tracklist {
+    display: none;
+}
+
+.ttw-music-player .tracklist ol {
+    margin: 0;
+    padding: 0;
+    overflow:hidden;
+}
+
+.ttw-music-player .tracklist li {
+    text-shadow: 0 1px 1px rgba(0, 0, 0, .6);
+    background: transparent url(../images/tracklist-item-bg.png) repeat-x bottom left scroll;
+    padding: 10px 0 10px 0;
+    list-style-position: inside;
+    position: relative;
+}
+
+.ttw-music-player .tracklist li:hover {
+    color: #eee;
+}
+
+.ttw-music-player li:last-child{
+    background: none;
+}
+
+.ttw-music-player .show-more-button li:last-child{
+    background: transparent url(../images/tracklist-item-bg.png) repeat-x bottom left scroll;
+}
+
+
+
+.ttw-music-player .tracklist .title {
+    width: 164px;
+    display: inline-block;
+    padding: 0 0 0 14px;
+    cursor: pointer;
+}
+
+.ttw-music-player li:nth-child(1n + 10) .title{
+    padding-left:7px;
+}
+
+.ttw-music-player li.playing {
+    color:#fff !important;
+
+}
+
+.ttw-music-player .tracklist .rating {
+    margin-left: 10px;
+    width: 30px;
+    display: block;
+    position: absolute;
+    right: 72px;
+    top: 12.5px;
+}
+
+.ttw-music-player .rating-bar {
+    height: 10px;
+    width: 3px;
+    display: block;
+    float: left;
+    cursor: pointer;
+    background: transparent url(../images/rating-bar.png) no-repeat 0 0 scroll;
+}
+
+.ttw-music-player .rating-bar.on,
+.ttw-music-player .rating-bar:hover,
+.ttw-music-player .rating-bar.hover {
+    background: transparent url(../images/rating-bar-on.png) no-repeat 0 0 scroll;
+}
+
+.ttw-music-player .buy {
+    width: 62px;
+    height: 16px;
+    display: inline-block;
+    position: absolute;
+    top: 9px;
+    right: 0;
+    border-radius: 8px;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    background: transparent url(../images/buy-bg.png) repeat 0 0 scroll;
+    margin: 0 0 0 10px;
+    font-size: 10px;
+    text-align: center;
+    line-height: 16px;
+    text-shadow: none;
+    color: #999;
+    text-decoration: none;
+}
+
+.ttw-music-player .buy:hover {
+    color: #eee;
+}
+
+.ttw-music-player .buy.not-active{
+    display:none;
+}
+
+.ttw-music-player .more {
+    display:none;
+    font-family: 'Lato Italic', arial, sans-serif;
+    font-style: italic;
+    font-size: 11px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, .6);
+    padding: 10px 0;
+    margin: 10px 0;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 6px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    background: transparent url(../images/tracklist-more.png) repeat 0 0 scroll;
+}
+
+.ttw-music-player .more:hover {
+    color: #eee;
+    box-shadow: inset 0px 0px 20px rgba(0, 0, 0, .2);
+    -moz-box-shadow: inset 0px 0px 20px rgba(0, 0, 0, .2);
+    -webkit-box-shadow: inset 0px 0px 20px rgba(0, 0, 0, .2);
+}
+
+.ttw-music-player .show-more-button .more{
+    display:block;
+}
+
+
+/** Transitions **/
+.ttw-music-player .more,
+.ttw-music-player .album-cover .highlight,
+.ttw-music-player .tracklist li,
+.ttw-music-player .buy {
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+/* http://perishablepress.com/press/2009/12/06/new-clearfix-hack */
+.ttw-music-player .player:after {
+    clear: both;
+    content: ' ';
+    display: block;
+    font-size: 0;
+    line-height: 0;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- GERAL --- */
+.geral {
+    font-size: 60px;
+    font-family: 'Great Vibes', cursive;
+    color: #161922;
+    margin-top: 100px;
+}
+.geral:before {
+    content: "";
+    display: block;
+    border-bottom: 29px solid transparent;
+    -webkit-border-image: url(../images/border.jpg) 30 round;
+    -o-border-image: url(../images/border.jpg) 30 round;
+    border-image: url(../images/border.jpg) 30 round;
+    width: 340px;
+    margin: -100px auto;
+}
+.titulo-geral {
+    font-size: 26px;
+    font-family: gotham;
+    color: #484848;
+    text-transform: uppercase;
+    margin-bottom: 70px;
+}
+.titulo-interno {
+    font-size: 50px;
+    font-family: gotham;
+    color: #2f9463;
+    float: left;
+}
+.sub-interno {
+    font-size: 18px;
+    font-family: gotham;
+    color: #807f7f;
+    margin-bottom: 30px;
+}
+.p-interno {
+    font-size: 14px;
+    color: #a8a9a9;
+    margin-bottom: 30px;
+}
+.botao {
+    font-size: 14px;
+    color: #fff;
+    text-transform: uppercase;
+    background: #090a0d;
+    border: 1px solid #090a0d;
+    padding: 15px 50px;
+    margin: 50px 5px 0 5px;
+    display: -webkit-inline-box;
+}
+.botao:hover {
+    color: #090a0d;
+    background: transparent;
+    border: 1px solid #090a0d;
+}
+.cadastrar {
+    color: #fff;
+    background: #faa61a!important;
+    border: 1px solid #faa61a!important;
+    padding: 0!important;
+}
+.cadastrar:hover {
+    color: #fff;
+    background: transparent!important;
+    border: 1px solid #fff!important;
+    padding: 0!important;
+}
+.topo {
+    margin-bottom: 50px;
+}
+.topo img {
+    width: 100%;
+    height: 235px;
+    object-fit: cover;
+    margin-bottom: 50px;
+}
+.breadcrumb {
+    float: right;
+    margin-bottom: 0;
+    background-color: transparent;
+    border-radius: 0;
+    margin-top: 25px;
+    padding: 8px 0;
+}
+.breadcrumb>li>a {
+    font-size: 14px;
+    color: #535353;
+    text-transform: uppercase;
+}
+.breadcrumb>li.active {
+    color: #3b7b01;
+    text-transform: uppercase;
+}
+.breadcrumb>li+li:before {
+    padding: 0 3px;
+    color: #535353;
+    content: "\003e";
+}
+.borda {
+    border-bottom: 1px solid #e0dfdf;
+    padding: 50px 0;
+}
+
+
+/* --- PLAY --- */
+/* .jmp3_container {
+    background: transparent;
+    float: none;
+    clear: both;
+    font-size: 16px;
+    padding: 0;
+    display: flex;
+    position: absolute;
+    top: 10px;
+    right: 15%;
+}
+.jmp3_container .jmp3_play, .jmp3_container .jmp3_pause, .jmp3_container .jmp3_stop, .jmp3_container .jmp3_infos, .jmp3_container .jmp3_next, .jmp3_container .jmp3_prev {
+    width: 25px!important;
+    height: 25px!important;
+}
+.jmp3_container .jmp3_pause,
+a.jmp3_play {
+    background-size: 100%!important;
+    margin: 4px 10px!important;
+}
+a.jmp3_stop {
+    display: none!important;
+}
+span.jmp3_trackbar {
+    display: none!important;
+}
+span.jmp3_timer {
+    display: none!important;
+}
+a.jmp3_infos {
+    display: none!important;
+}
+span.jmp3_currentTrackDetails {
+    display: block!important;
+}
+.jmp3_container .jmp3_prev,
+.jmp3_container .jmp3_next {
+    margin-top: 8px;
+}
+.jmp3_container .jmp3_currentTrackDetails {
+    background: transparent;
+    color: #f6d79c;
+    text-transform: uppercase;
+    margin-top: 6px;
+    font-size: 12px;
+} */
+/* li.musica {
+    width: 257px;
+    height: 52px;
+} */
+
+
+/* --- MENU --- */
+.navbar-default {
+    background-color: transparent;
+    border-color: transparent;
+    height: 145px;
+    border-radius: 0;
+    margin-bottom: 0px;
+    border: none;
+    font-family: 'Great Vibes', cursive;
+}
+.navbar-header {
+    height: 145px;
+}
+.navbar-brand {
+    margin: 0;
+    padding: 0;
+}
+.navbar-header img {
+    margin: 40px 0;
+    width: 90px;
+}
+#bs-example-navbar-collapse-1 {
+    float: right;
+    height: 145px;
+    padding: 0;
+}
+ul.nav {
+    margin-right: -10px;
+    height: 145px;
+    display: flex;
+    align-items: center;
+}
+ul.nav>li>a {
+    font-size: 26px;
+    color: #f6d79c!important;
+    padding: 20px;
+}
+ul.nav>li>a:hover {
+    color: #fff!important;
+}
+.fixo {
+    z-index: 9999;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    background: #000;
+
+        -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+.fixo .navbar-header img {
+    margin: 15px 0;
+    width: 80px;
+}
+.fixo ul.nav {
+    height: 80px;
+    margin-top: 15px;
+}
+.fixo .jmp3_container {
+    font-size: 14px;
+    top: 0;
+    z-index: 100000;
+}
+a#link1,
+a#link2,
+a#link3,
+a#link4 {
+    margin-top: -180px;
+    position: absolute;
+}
+
+
+
+.vitrine {
+    margin-top: -145px;
+    position: relative;
+    z-index: -1;
+}
+.vitrine .item {
+    height: 640px;
+}
+.vitrine .item img.slide {
+    width: 100%;
+    height: 640px;
+    object-fit: cover;
+    object-position: center;
+}
+.carousel-caption {
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.grid {
+    width: 100%!important;
+}
+.grid-item {
+    width: 33.33%;
+    height: auto;
+    float: left;
+}
+.grid-item img {
+    width: 100%;
+}
+
+
+.contagem {
+    min-height: 480px;
+    background: #f6f6f7;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+}
+.contagem h1 {
+    font-size: 42px;
+    color: #d7c69f;
+    width: 430px;
+    margin: 30px auto;
+}
+.contagem h1 a {
+    display: flex;
+    float: right;
+    margin-top: 12px;
+}
+.contagem p {
+    font-size: 16px;
+    color: #161922;
+}
+.contagem i {
+    font-size: 16px;
+    color: #000;
+    border: 2px solid;
+    padding: 3px 5px;
+    border-radius: 50px;
+}
+.flip-clock-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.flip-clock-wrapper .flip {
+    box-shadow: none;
+}
+.flip-clock-wrapper ul {
+    background: transparent!important;
+}
+.flip-clock-wrapper ul li a {
+    font-weight: 300;
+}
+.flip-clock-wrapper ul li a div div.inn {
+    color: #000!important;
+    background-color: #f6f6f7!important;
+}
+.flip-clock-wrapper ul li a div.up:after {
+    background-color: #000!important;
+    background-color: transparent!important;
+}
+.flip-clock-divider .flip-clock-label {
+    top: 90px;
+    right: -115px!important;
+    font-size: 26px;
+}
+p.relogio {
+    margin-bottom: -60px;
+    margin-top: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    width: 625px;
+    font-size: 26px;
+    color: #000;
+}
+
+
+#sobre-nos {
+    min-height: 600px;
+    background: #f1f1f1;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+#sobre-nos .content {
+    display: -webkit-inline-box;
+    margin: 100px 50px 0 50px;
+}
+#sobre-nos h4 {
+    font-size: 24px;
+    font-family: 'Playfair Display', serif;
+    color: #161922;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+
+
+#chaplin {
+    min-height: 600px;
+    background: url('../images/chaplin.jpg') no-repeat;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+}
+#chaplin h1 {
+    font-size: 60px;
+    font-family: 'Great Vibes', cursive!important;
+    color: #f6d79c;
+}
+#chaplin h4 {
+    font-size: 24px;
+    color: #f6d79c;
+    margin: 60px 0;
+}
+#chaplin p {
+    font-size: 22px;
+    color: #f6f6f7;
+}
+#chaplin a.localizac {
+    font-size: 14px;
+    color: #f6d79c;
+    text-transform: uppercase;
+    border: 1px solid #f6d79c;
+    padding: 10px 30px;
+}
+#chaplin a.localizac:hover {
+    color: #161922;
+    background: #f6d79c;
+    border: 1px solid #f6d79c;
+}
+
+
+#direita {
+    width: 10px;
+    height: 900px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 3000;
+}
+#esquerda {
+    width: 10px;
+    height: 900px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3000;
+}
+
+
+.fotos {
+    text-align: center;
+    padding-top: 250px;
+}
+.fotos img.foto {
+    width: 100%;
+}
+.fotos .geral {
+    margin-top: 0;
+    margin-bottom: 90px;
+}
+
+
+#dicas {
+    min-height: 740px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    padding-top: 100px;
+}
+#dicas .geral {
+    margin-top: 100px;
+    margin-bottom: 150px;
+}
+#dicas h4 {
+    font-size: 24px;
+    color: #28202a;
+    margin: 20px 0;
+}
+#dicas p {
+    font-size: 16px;
+    color: #28202a;
+}
+#dicas .botao {
+    margin: 10px 0;
+}
+
+
+#presentes {
+    min-height: 670px;
+    background: #f4f4f5;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+}
+#presentes .geral {
+    margin-top: 150px;
+    margin-bottom: 100px;
+}
+#presentes p {
+    font-size: 16px;
+    color: #28202a;
+}
+.mg {
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+
+.modal {
+    z-index: 30000!important;
+}
+.modal-body {
+    padding: 15px 75px;
+}
+.modal-body p {
+    font-family: arial;
+    line-height: 20px;
+    margin-bottom: 20px;
+}
+.modal-body p.titulo-modal {
+    font-weight: 700;
+    margin-bottom: 0px;
+}
+.mg-30 {
+    margin: 30px;
+}
+.close {
+    opacity: 1;
+}
+
+
+#confirme {
+    min-height: 525px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+}
+#confirme form input.form-control,
+.login form input.form-control {
+    height: 45px;
+    border: 2px solid #d7c69f;
+    border-radius: 0;
+}
+#confirme .geral,
+.login .geral {
+    margin-bottom: 100px;
+}
+::-webkit-input-placeholder {
+   font-size: 14px;
+   color: #28202a!important;
+   text-transform: uppercase;
+}
+:-moz-placeholder {
+   font-size: 14px;
+   color: #28202a!important;
+   text-transform: uppercase;
+}
+::-moz-placeholder {
+   font-size: 14px;
+   color: #28202a!important;
+   text-transform: uppercase;
+}
+:-ms-input-placeholder {
+   font-size: 14px;
+   color: #28202a!important;
+   text-transform: uppercase;
+}
+
+
+.login {
+    display: flex;
+    height: 976px;
+    background: url(../images/tela-espera-diego.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.painel {
+    display: flex;
+    height: 976px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.login img.logo {
+    width: 100%;
+}
+.login input#password {
+    width: 300px;
+    margin: 50px auto 0;
+}
+.login .content .botao {
+    margin: 5px 0;
+}
+
+
+.fotos-geral {
+    width: 100%;
+    height: 900px;
+    position: relative;
+}
+.fotos-geral img:hover {
+    -webkit-transform:scale(1.3);
+    transform:scale(1.3);
+}
+.fotos img {
+    width: 100%;
+    -webkit-transition: all 0.7s ease;
+    transition: all 0.7s ease;
+}
+.foto {
+    position: absolute;
+    overflow: hidden;
+}
+.foto-um {
+    width: 23%;
+    top: 0;
+    left: 0;
+}
+.foto-dois {
+    width: 33%;
+    top: 0;
+    left: 23%;
+}
+.foto-tres {
+    width: 33%;
+    top: 357px;
+    left: 23%;
+}
+.foto-quatro {
+    width: 22%;
+    top: 0;
+    left: 78%;
+}
+.foto-cinco {
+    width: 22%;
+    top: 0;
+    left: 56%;
+}
+.foto-seis {
+    width: 44%;
+    top: 510px;
+    left: 56%;
+}
+.foto-um img {
+    height: 910px;
+    object-fit: cover;
+}
+.foto-dois img {
+    height: 357px;
+    object-fit: cover;
+}
+.foto-tres img {
+    height: 552px;
+    object-fit: cover;
+}
+.foto-quatro img {
+    height: 510px;
+    object-fit: cover;
+}
+.foto-cinco img {
+    height: 510px;
+    object-fit: cover;
+}
+.foto-seis img {
+    height: 399px;
+    object-fit: cover;
+}
+.fotorama {
+    height: 600px;
+}
+.fotorama__wrap {
+    margin: 0 auto;
+}
+.fotorama__stage {
+    height: 500px!important;
+    margin: 0 auto!important;
+}
+.fotorama__active img.fotorama__img {
+    width: 100%!important;
+    height: 500px!important;
+    object-fit: cover!important;
+    top: 0!important;
+}
+
+
+.agradecimento {
+    min-height: 445px;
+    background: url('../images/agradecimento.jpg') no-repeat;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+}
+.agradecimento .geral {
+    font-size: 60px;
+    font-family: 'Great Vibes', cursive;
+    color: #f6d79c;
+    margin-top: 190px;
+}
+.agradecimento .geral:before {
+    content: "";
+    display: block;
+    border-bottom: 54px solid transparent;
+    -webkit-border-image: url(../images/border2.png) 54 0 round;
+    -o-border-image: url(../images/border2.png) 54 0 round;
+    border-image: url(../images/border2.png) 54 0 round;
+    width: 210px;
+    margin: 0 auto -130px auto;
+}
+
+footer img {
+    width: 100%;
+    margin-top: -1px;
+}
+
+
+/* --- MOBILE --- */
+@media (max-width: 767px) {
+    a.navbar-brand {
+        margin-top: 30px;
+    }
+    .navbar-header img {
+        margin: 25px 0;
+        width: 75px;
+    }
+    .musicas {
+        top: 0;
+        right: 0;
+    }
+    .ttw-music-player .track-info {
+        width: 200px;
+        float: right;
+    }
+    .navbar-default .navbar-toggle {
+        border-color: #fff;
+    }
+    .navbar-default .navbar-toggle .icon-bar {
+        background-color: #fff;
+    }
+    .navbar-toggle {
+        padding: 15px 15px;
+        margin-top: 50px;
+    }
+    .navbar-default .navbar-nav .open .dropdown-menu>li>a {
+        color: #fff;
+    }
+    #bs-example-navbar-collapse-1 {
+        float: none;
+        height: auto!important;
+        position: relative;
+        z-index: 100;
+        margin-top: -65px;
+        background: #000;
+        text-align: center;
+        width: 111%;
+        margin-left: -15px;
+        margin-bottom: -15px;
+    }
+    .fixo ul.nav {
+        height: auto;
+        margin-top: 15px;
+    }
+    ul.nav {
+        display: block;
+        margin-right: 0;
+        height: auto;
+        margin-bottom: 25px;
+    }
+    ul.nav>li {
+        margin-top: 15px;
+    }
+    .fixo {
+        height: 105px;
+    }
+    .ttw-music-player .player .title {
+        font-size: 10px;
+    }
+    .vitrine .item img {
+        float: none;
+        width: 100%;
+        height: 200px;
+    }
+    .carousel-caption {
+        height: 60%;
+    }
+    .carousel-caption img {
+        height: auto!important;
+    }
+    .flip-clock-divider .flip-clock-label {
+        top: 100px;
+        right: -56px!important;
+        font-size: 14px;
+    }
+    .flip-clock-wrapper ul li a div div.inn {
+        font-size: 30px;
+    }
+    .flip-clock-dot.top {
+        top: 40px;
+    }
+    .flip-clock-dot {
+        width: 5px;
+        height: 5px;
+        left: 2px;
+    }
+    .flip-clock-dot.bottom {
+        bottom: 42px;
+    }
+    .contagem h1 {
+        font-size: 22px;
+        width: 100%;
+    }
+    .contagem h1 a {
+        margin-top: 0;
+        margin-right: 15px;
+        margin-left: -15px;
+    }
+    .geral {
+        font-size: 30px;
+        margin-top: 100px;
+    }
+    .geral:before {
+        content: "";
+        border-bottom: 20px solid transparent;
+        -webkit-border-image: url(../images/border.jpg) 41 0 round;
+        -o-border-image: url(../images/border.jpg) 41 0 round;
+        border-image: url(../images/border.jpg) 41 0 round;
+        width: 260px;
+        margin: 0 auto -70px auto;
+    }
+    #chaplin h1 {
+        font-size: 30px;
+    }
+    #chaplin h4 {
+        font-size: 16px;
+        margin: 40px 0;
+    }
+    #chaplin p {
+        font-size: 14px;
+    }
+    .fotos {
+        padding-top: 170px;
+    }
+    .botao {
+        margin: 0 0 10px;
+    }
+    .agradecimento .geral {
+        font-size: 16px;
+        margin-top: 65px;
+    }
+    .agradecimento .geral:before {
+        content: "";
+        margin: 0 auto -35px auto;
+        width: 70px;
+        border-bottom: 15px solid transparent;
+    }
+    .modal-body {
+        padding: 15px 10px;
+    }
+    .agradecimento {
+        height: 110px;
+        min-height: 110px;
+        width: 100%;
+        background: url(../images/agradecimento.jpg) no-repeat;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        font-family: 'Playfair Display', serif;
+    }
+    .login {
+        display: flex;
+        height: 800px;
+        background: url(../images/tela-espera-diego.jpg) no-repeat;
+        background-size: 170%;
+        background-position: top;
+        background-color: #102131;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .content {
+        margin-top: -90px;
+    }
+    .login img.logo {
+        width: 60%;
+    }
+    p.relogio {
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 900px) {
+    .carousel-caption img {
+        width: 85%;
+    }
+    .carousel-caption {
+        height: 60%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+    #presentes img.mg {
+        width: 100%;
+    }
+}
